@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleMen - Tienda de Ropa para Caballero</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>StyleMen</h1>
+                <p class="tagline">Moda para Caballeros</p>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="carrito-icon">
+                <span id="carrito-contador">0</span>
+                🛒
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h2>Bienvenido a StyleMen</h2>
+            <p>Descubre nuestra colección de playeras, chamarras y tenis de calidad premium</p>
+            <button class="btn-principal" onclick="document.getElementById('productos').scrollIntoView({behavior: 'smooth'})">
+                Ver Productos
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CATEGORÍAS -->
+    <section class="categorias">
+        <div class="container">
+            <h2>Nuestras Categorías</h2>
+            <div class="grid-categorias">
+                <div class="categoria-card">
+                    <div class="categoria-icon">👕</div>
+                    <h3>Playeras</h3>
+                    <p>Playeras cómodas y modernas</p>
+                </div>
+                <div class="categoria-card">
+                    <div class="categoria-icon">🧥</div>
+                    <h3>Chamarras</h3>
+                    <p>Chamarras elegantes y resistentes</p>
+                </div>
+                <div class="categoria-card">
+                    <div class="categoria-icon">👟</div>
+                    <h3>Tenis</h3>
+                    <p>Tenis deportivos y casuales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE PRODUCTOS -->
+    <section class="productos" id="productos">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            
+            <!-- FILTROS -->
+            <div class="filtros">
+                <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+                <button class="filtro-btn" data-filtro="playeras">Playeras</button>
+                <button class="filtro-btn" data-filtro="chamarras">Chamarras</button>
+                <button class="filtro-btn" data-filtro="tenis">Tenis</button>
+            </div>
+
+            <!-- GRID DE PRODUCTOS -->
+            <div class="grid-productos" id="grid-productos">
+                <!-- Los productos se cargarán aquí con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DEL CARRITO -->
+    <div class="modal-carrito" id="modal-carrito">
+        <div class="modal-contenido">
+            <button class="cerrar-modal" onclick="cerrarCarrito()">&times;</button>
+            <h2>Tu Carrito</h2>
+            <div id="carrito-items">
+                <p class="carrito-vacio">Tu carrito está vacío</p>
+            </div>
+            <div class="carrito-total">
+                <h3>Total: <span id="total-precio">$0.00</span></h3>
+                <button class="btn-comprar">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN DE CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <div class="contacto-info">
+                <div class="info-card">
+                    <h3>📍 Ubicación</h3>
+                    <p>Tu Ciudad, País</p>
+                </div>
+                <div class="info-card">
+                    <h3>📞 Teléfono</h3>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="info-card">
+                    <h3>📧 Email</h3>
+                    <p>info@stylomen.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2024 StyleMen. Todos los derechos reservados.</p>
+        <p>Diseñado con ❤️ para caballeros con estilo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
